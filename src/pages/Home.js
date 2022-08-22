@@ -2,8 +2,13 @@ import React from 'react';
 import styled  from 'styled-components';
 import PangImage  from '../assets/cats.jpg';
 import Button from 'react-bootstrap/Button';
+import { useNavigate } from 'react-router-dom';//페이지이동
 
 const Home = () =>{
+  const Navigate = useNavigate();
+  const handleClickButton = () => {
+    Navigate('/question');
+  }
   return (
     <Wrapper>
       <Header>예비집사 판별기</Header>
@@ -13,7 +18,7 @@ const Home = () =>{
           <img src={PangImage} className="rounded-circle" width={350} height={350}/>
         </LogoImage>
         <Desc>MBTI를 기반으로하는 나랑 잘맞는 고양이</Desc>
-        <Button>테스트 시작하기</Button>
+        <Button onClick={handleClickButton}>테스트 시작하기</Button>
       </Contents>
     </Wrapper>
   )
