@@ -1,5 +1,5 @@
 import React from 'react';
-import styled  from 'styled-components';
+import styled  from 'styled-components';//css사용시 필요함
 import PangImage  from '../assets/cats.jpg';
 import Button from 'react-bootstrap/Button';
 import { useNavigate } from 'react-router-dom';//페이지이동
