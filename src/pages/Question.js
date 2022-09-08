@@ -95,8 +95,8 @@ const Question = () => {
       <ProgressBar striped variant="danger" now={questionNo / QuestionData.length * 100} style={{marginTop:'20px'}}/>
       <Title>{QuestionData[questionNo].title}</Title>
       <ButtonGrounp>
-        <Button onClick={() => handleClickButton(1 , QuestionData[questionNo].type)} style={{width:'40%', minHeight:'200px', fontSize:'15px'}}>{QuestionData[questionNo].answera}</Button>
-        <Button onClick={() => handleClickButton(0 , QuestionData[questionNo].type)}  style={{width:'40%', minHeight:'200px', fontSize:'15px',marginLeft:'20px'}}>{QuestionData[questionNo].answerb}</Button>
+        <Button onClick={() => handleClickButton(1 , QuestionData[questionNo].type)} style={{width:'40%', minHeight:'200px', fontSize:'23px'}}>{QuestionData[questionNo].answera}</Button>
+        <Button onClick={() => handleClickButton(0 , QuestionData[questionNo].type)}  style={{width:'40%', minHeight:'200px', fontSize:'23px',marginLeft:'20px'}}>{QuestionData[questionNo].answerb}</Button>
       </ButtonGrounp>
     </Wrapper>
   )
@@ -105,16 +105,19 @@ const Question = () => {
 export default Question;
 
 const Wrapper = styled.div`
-  background-color:pink;
+  background-color:#9E5FE3;
   height:100vh;
   width:100%;
 `
 const Title = styled.div`
+  font-family: "SimKyungha";
   text-align:center;
   font-size:40px;
+  color:#fff;
 `
 
 const ButtonGrounp = styled.div`
+  font-family: "SimKyungha";
   display:flex;
   flex-direction:row;
   align-items:center;

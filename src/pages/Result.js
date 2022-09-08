@@ -16,18 +16,25 @@ import { ResultData } from "../assets/data/resultdata";
     setResultData(result);
   }, [mbti] );
 
-  console.log(resultData);
 
   return (
     <Wrapper>
     <Header>요정 판별기</Header>
     <Contents>
-      <Title>결과 보기</Title>
+      {/* <Title>결과 보기</Title> */}
+      <Name>당신은 {resultData.name}</Name>
       <LogoImage>
-        <img src={resultData.image} alt="" className="rounded-circle" width={350} height={350}/>
+        <img src={resultData.image} alt="" width={450} height={450}/>
       </LogoImage>
-      <Desc>당신은 {resultData.name}입니다</Desc>
-      <Button onClick={() => navigate("/")}>테스트 다시하기</Button>
+      <Desc>{resultData.desc}입니다</Desc>
+      <Fea>{resultData.fea}</Fea>
+      <Button onClick={() => navigate("/")} className="btn-danger"
+              style={{
+                width: 170,
+                fontFamily: "SimKyungha",
+                fontSize: 25,
+                marginTop: 20,
+              }}>테스트 다시하기</Button>
     </Contents>
   </Wrapper>
   )
@@ -36,8 +43,8 @@ import { ResultData } from "../assets/data/resultdata";
 export default Result;
 
 const Wrapper = styled.div`
-  background-color:pink;
-  height:100vh;
+  background-color:#9E5FE3;
+  height:120vh;
   width:100%;
 `
 
@@ -46,26 +53,48 @@ const Contents = styled.div`
   justify-content:center;
   align-items:center;
   flex-direction:column;
+  height:100vh;
 `
 
 const Header = styled.div`
-  font-size:40px;
+  font-family: "SimKyungha";
+  font-size:45px;
+  height:10vh;
   display:flex;
   justify-content:center;
   align-items:center;
+  background:#8A20FA;
+  color:#fff;
 `
 
-const Title = styled.div`
-  font-size:30px;
-  margin-top:40px;
-`
+// const Title = styled.div`
+//   font-size:30px;
+//   margin-top:40px;
+//   color:#fff;
+// `
 
 const LogoImage = styled.div`
 margin-top:10px;
 `
 
 const Desc = styled.div`
-font-size:20px;
-margin-top:20px;
+font-family: "SimKyungha";
+font-size:25px;
+color:#fff;
+`
+const Name = styled.div`
+font-family: "SimKyungha";
+font-size:28px;
+margin-top:60px;
+color:#fff;
+`
+
+const Fea = styled.div`
+font-family: "SimKyungha";
+font-size:22px;
+margin-top:15px;
+color:#fff;
+width:50%;
+white-space:break-spaces;
 `
 
