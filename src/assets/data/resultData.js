@@ -1,19 +1,20 @@
-import Infj from '../image/infj.jpeg'
-import Infp from '../image/infp.jpeg'
-import Intj from '../image/intj.jpeg'
-import Intp from '../image/intp.jpeg'
-import Isfp from '../image/isfp.jpeg'
-import Isfj from '../image/isfj.jpeg'
-import Istp from '../image/istp.jpeg'
-import Istj from '../image/istj.jpeg'
-import Enfp from '../image/enfp.jpeg'
-import Enfj from '../image/enfj.jpeg'
-import Entj from '../image/entj.jpeg'
-import Entp from '../image/entp.jpeg'
-import Esfp from '../image/esfp.jpeg'
-import Esfj from '../image/esfj.jpeg'
-import Estp from '../image/estp.jpeg'
-import Estj from '../image/estj.jpeg'
+import Infj from '../images/infj.jpeg'
+import Infp from '../images/infp.jpeg'
+import Intj from '../images/intj.jpeg'
+import Intp from '../images/intp.jpeg'
+import Isfp from '../images/isfp.jpeg'
+import Isfj from '../images/isfj.jpeg'
+import Istp from '../images/istp.jpeg'
+import Istj from '../images/istj.jpeg'
+import Enfp from '../images/enfp.jpeg'
+import Enfj from '../images/enfj.jpeg'
+import Entj from '../images/entj.jpeg'
+import Entp from '../images/entp.jpeg'
+import Esfp from '../images/esfp.jpeg'
+import Esfj from '../images/esfj.jpeg'
+import Estp from '../images/estp.jpeg'
+import Estj from '../images/estj.jpeg'
+
 
 export const ResultData = [
   {
@@ -26,7 +27,7 @@ export const ResultData = [
   {
     id:2,
     name:'노움',
-    best:'INFJ',
+    best:'INFP',
     desc:'상냥하지만 관심없으면 공감능력제로 정원요정',
     image:`${Infp}`
   },
@@ -127,5 +128,5 @@ export const ResultData = [
     best:'ESTJ',
     desc:'강한 책임감과 유대감을 지녔지만 젊은 꼰대 거인들의 요정',
     image:`${Estj}`
-  },
+  }
 ]

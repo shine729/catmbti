@@ -1,21 +1,32 @@
-import React from 'react';
-import styled  from 'styled-components'; //css사용시 필요함
-import PangImage  from '../assets/cats.jpg';
-import Button from 'react-bootstrap/Button';
-import { Navigate, useNavigate } from 'react-router-dom'; //페이지이동
-import { ResultData } from '../assets/data/resultData';
+import React from "react";
+import styled from "styled-components";
+import Button from "react-bootstrap/Button";
+import { useNavigate, useSearchParams } from "react-router-dom";
+import { ResultData } from "../assets/data/resultdata";
 
-const Result = () =>{
-  const navigate = useNavigate();
+  const Result = () => {
+    const navigate = useNavigate();
+    const [searchParams] = useSearchParams();
+    const mbti = searchParams.get("mbti");
+    const [resultData, setResultData] = React.useState({});
+
+
+  React.useEffect(() => {
+    const result = ResultData.find((s) => s.best === mbti);
+    setResultData(result);
+  }, [mbti] );
+
+  console.log(resultData);
+
   return (
     <Wrapper>
-    <Header>예비집사 판별기</Header>
+    <Header>요정 판별기</Header>
     <Contents>
       <Title>결과 보기</Title>
       <LogoImage>
-        <img src={PangImage} className="rounded-circle" width={350} height={350}/>
+        <img src={resultData.image} alt="" className="rounded-circle" width={350} height={350}/>
       </LogoImage>
-      <Desc>당신의 요정은 산타요정입니다.</Desc>
+      <Desc>당신은 {resultData.name}입니다</Desc>
       <Button onClick={() => navigate("/")}>테스트 다시하기</Button>
     </Contents>
   </Wrapper>

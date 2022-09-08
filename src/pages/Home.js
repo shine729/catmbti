@@ -1,6 +1,5 @@
 import React from 'react';
 import styled  from 'styled-components';//css사용시 필요함
-import PangImage  from '../assets/cats.jpg';
 import Button from 'react-bootstrap/Button';
 import { useNavigate } from 'react-router-dom';//페이지이동
 
@@ -15,7 +14,7 @@ const Home = () =>{
       <Contents>
         <Title>나에게 맞는 주인님은?</Title>
         <LogoImage>
-          <img src={PangImage} className="rounded-circle" width={350} height={350}/>
+          <img className="rounded-circle" width={350} height={350}/>
         </LogoImage>
         <Desc>MBTI를 기반으로하는 나랑 잘맞는 고양이</Desc>
         <Button onClick={handleClickButton}>테스트 시작하기</Button>
