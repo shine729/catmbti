@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Button from "react-bootstrap/Button";
 import { useNavigate, useSearchParams } from "react-router-dom";
-import { ResultData } from "../assets/data/resultdata";
+import { ResultData } from "../assets/data/Resultdata";
 
   const Result = () => {
     const navigate = useNavigate();
