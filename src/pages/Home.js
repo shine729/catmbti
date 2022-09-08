@@ -15,7 +15,7 @@ const Home = () =>{
       <Contents>
         <Title>나에게 맞는 주인님은?</Title>
         <LogoImage>
-          <img src={Fairy} width={350} height={350}/>
+          <img alt="요정사진" src={Fairy} width={350} height={350}/>
         </LogoImage>
         <Desc>MBTI를 기반으로하는 요정테스트</Desc>
         <Desc2>요정으로 태어나면 당신은 어떤요정일까?</Desc2>

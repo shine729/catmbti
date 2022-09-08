@@ -24,7 +24,7 @@ import { ResultData } from "../assets/data/resultdata";
       {/* <Title>결과 보기</Title> */}
       <Name>당신은 {resultData.name}</Name>
       <LogoImage>
-        <img src={resultData.image} alt="" width={450} height={450}/>
+        <img src={resultData.image} alt="결과이미지" width={450} height={450}/>
       </LogoImage>
       <Desc>{resultData.desc}입니다</Desc>
       <Fea>{resultData.fea}</Fea>
