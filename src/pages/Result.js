@@ -3,6 +3,8 @@ import styled from "styled-components";
 import Button from "react-bootstrap/Button";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { ResultData } from "../assets/data/resultData";
+import { ButtonGroup } from 'react-bootstrap';
+import KakaoShareButton from '../component/KakaoShareButton';
 
   const Result = () => {
     const navigate = useNavigate();
@@ -28,13 +30,17 @@ import { ResultData } from "../assets/data/resultData";
       </LogoImage>
       <Desc>{resultData.desc}입니다</Desc>
       <Fea>{resultData.fea}</Fea>
-      <Button onClick={() => navigate("/")} className="btn-danger"
-              style={{
-                width: 170,
-                fontFamily: "SimKyungha",
-                fontSize: 25,
-                marginTop: 20,
-              }}>테스트 다시하기</Button>
+      <ButtonGroup>
+        <Button onClick={() => navigate("/")} className="btn-danger"
+                style={{
+                  width: 170,
+                  fontFamily: "SimKyungha",
+                  fontSize: 25,
+                  marginTop: 20,
+                }}>테스트 다시하기</Button>
+                <KakaoShareButton/>
+      </ButtonGroup>
+              
     </Contents>
   </Wrapper>
   )
@@ -97,4 +103,7 @@ color:#fff;
 width:50%;
 white-space:break-spaces;
 `
-
+const Buttongroup = styled.div`
+  display:flex;
+  flex-directon:row;
+`
