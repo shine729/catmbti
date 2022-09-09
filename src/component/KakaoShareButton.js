@@ -38,9 +38,11 @@ const KakaoShareButton = () => {
         },
       ]
     });
+
   }
+
   return(
-    <Button className="btn-danger" style={{
+    <Button onClick={shareKakao} className="btn-danger" style={{
       width: 170,
       fontFamily: "SimKyungha",
       fontSize: 25,
@@ -48,6 +50,7 @@ const KakaoShareButton = () => {
       marginLeft: 20,
     }}>카카오톡 공유하기</Button>
   )
+
 }
 
 export default KakaoShareButton;
