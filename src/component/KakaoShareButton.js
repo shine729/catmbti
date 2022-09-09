@@ -3,11 +3,9 @@ import Button from "react-bootstrap/Button";
 
 const {Kakao} = window;
 
-const KakaoShareButton = () => {
+const KakaoShareButton = ({data}) => {
   const url = "https://fairymbti.netlify.app/";
   const resultUrl = window.location.href;
-
-  // console.log('ddd',resultUrl,url)
 
   React.useEffect(() => {
     Kakao.cleanup();
@@ -21,19 +19,19 @@ const KakaoShareButton = () => {
       objectType: 'feed',
       content: {
         title: '요정 판별기 결과',
-        description: '당신이 요정으로 태어난다면 료스알브입니다',
-        imageUrl:
-          'https://mud-kage.kakao.com/dn/NTmhS/btqfEUdFAUf/FjKzkZsnoeE4o19klTOVI1/openlink_640x640s.jpg',
+        description: `당신이 요정으로 태어난다면 ${data.name}입니다`,
+        imageUrl:url + data.image,
         link: {
-          mobileWebUrl: 'https://developers.kakao.com',
-          androidExecutionParams: 'test',
+          mobileWebUrl: resultUrl,
+          webUrl:resultUrl,
         },
       },
       buttons: [
         {
           title: '나도 테스트 하러가기',
           link: {
-            mobileWebUrl: "https://fairymbti.netlify.app/",
+            mobileWebUrl: url,
+            webUrl:url,
           },
         },
       ]

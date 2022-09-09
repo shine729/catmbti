@@ -38,7 +38,7 @@ import KakaoShareButton from '../component/KakaoShareButton';
                   fontSize: 25,
                   marginTop: 20,
                 }}>테스트 다시하기</Button>
-                <KakaoShareButton/>
+                <KakaoShareButton data={resultData}/>
       </ButtonGroup>
               
     </Contents>
