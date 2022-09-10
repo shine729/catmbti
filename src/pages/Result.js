@@ -5,6 +5,7 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 import { ResultData } from "../assets/data/resultData";
 // import { ButtonGroup } from 'react-bootstrap';
 import KakaoShareButton from '../component/KakaoShareButton';
+import Fairy2 from '../assets/images/fairy2.png';
 
   const Result = () => {
     const navigate = useNavigate();
@@ -21,10 +22,10 @@ import KakaoShareButton from '../component/KakaoShareButton';
 
   return (
     <Wrapper>
-    <Header>요정 판별기</Header>
+    <Header><img alt="요정사진" src={Fairy2} width={50} height={50}/>요정 판별기<img alt="요정사진" src={Fairy2} width={50} height={50}/></Header>
     <Contents>
+    <Name>당신은 {resultData.name}입니다</Name>
       {/* <Title>결과 보기</Title> */}
-      <Name>당신은 {resultData.name}</Name>
       <LogoImage>
         <img src={resultData.image} alt="결과이미지" width={350} height={350}/>
       </LogoImage>
@@ -39,6 +40,8 @@ import KakaoShareButton from '../component/KakaoShareButton';
                   fontFamily: "SimKyungha",
                   fontSize: 23,
                   marginTop: 20,
+                  borderColor:'#8A20FA',
+                  backgroundColor:'#8A20FA'
                 }}>테스트 다시하기</Button>
                 <KakaoShareButton data={resultData}/>
       </Buttongroup>
@@ -87,60 +90,64 @@ margin-top:0;
 
 const Desc = styled.div`
 font-family: "SimKyungha";
-font-size:25px;
+font-size:30px;
 color:#fff;
+width:30%;
+margin:0 auto;
+white-space:break-spaces;
+text-align:center;
 @media screen and (max-width: 992px) {
-  font-size:22px;
+  font-size:23px;
   width:90%;
 }
 `
 const Name = styled.div`
 font-family: "SimKyungha";
-font-size:28px;
+font-size:30px;
 margin-top:30px;
 color:#fff;
 @media screen and (max-width: 992px) {
   margin-top:10px;
-  font-size:25px;
+  font-size:26px;
 }
 `
 
 const Fea = styled.div`
-font-family: "SimKyungha";
-font-size:22px;
+font-family: "NanumSquareRoundR";
+font-size:15px;
 margin-top:15px;
 color:#fff;
-width:50%;
+width:30%;
 white-space:break-spaces;
 @media screen and (max-width: 992px) {
   width:90%;
-  font-size:20px;
+  font-size:14px;
 }
 `
 
 const Char = styled.div`
-font-family: "SimKyungha";
-font-size:22px;
+font-family: "NanumSquareRoundR";
+font-size:16px;
 margin-top:15px;
 color:#fff;
-width:50%;
+width:30%;
 white-space:pre-wrap;
 @media screen and (max-width: 992px) {
   width:90%;
-  font-size:20px;
+  font-size:15px;
 }
 `
 
 const Sick = styled.div`
-font-family: "SimKyungha";
-font-size:22px;
+font-family: "NanumSquareRoundR";
+font-size:16px;
 margin-top:15px;
 color:#fff;
-width:50%;
+width:30%;
 white-space:pre-wrap;
 @media screen and (max-width: 992px) {
   width:90%;
-  font-size:20px;
+  font-size:15px;
 }
 `
 
@@ -149,7 +156,6 @@ const Buttongroup = styled.div`
   flex-directon:row;
   margin-bottom: 30px;
   @media screen and (max-width: 992px) {
-    margin-bottom: 130px;
     width:90%;
   }
 `
