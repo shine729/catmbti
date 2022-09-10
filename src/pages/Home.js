@@ -13,7 +13,7 @@ const Home = () =>{
     <Wrapper>
       <Header>요정 판별기</Header>
       <Contents>
-        <Title>나에게 맞는 주인님은?</Title>
+        <Title>나에게 성향에 맞는 요정은?</Title>
         <LogoImage>
           <img alt="요정사진" src={Fairy} width={350} height={350}/>
         </LogoImage>
@@ -22,7 +22,7 @@ const Home = () =>{
         <Button onClick={handleClickButton} className="btn-danger"
             style={{
               fontFamily: "SimKyungha",
-              fontSize: 25,
+              fontSize: 23,
               marginTop: 20,
               marginBottom: 20,
             }}>테스트 시작하기</Button>
@@ -54,12 +54,21 @@ const Header = styled.div`
   align-items:center;
   background:#8A20FA;
   color:#fff;
+  @media screen and (max-width: 992px) {
+    height:60px;
+    font-size:40px;
+  }
 `
 
 const Title = styled.div`
   font-family: "SimKyungha";
   font-size:30px;
   margin-top:40px;
+  color:#fff;
+  @media screen and (max-width: 992px) {
+    margin-top:15px;
+    font-size:25px;
+  }
 `
 
 const LogoImage = styled.div`
@@ -70,9 +79,18 @@ const Desc = styled.div`
 font-family: "SimKyungha";
 font-size:28px;
 margin-top:20px;
+color:#fff;
+  @media screen and (max-width: 992px) {
+    font-size:25px;
+    margin-top:0;
+  }
 `
 
 const Desc2 = styled.div`
 font-family: "SimKyungha";
 font-size:28px;
+color:#fff;
+  @media screen and (max-width: 992px) {
+    font-size:25px;
+  }
 `
