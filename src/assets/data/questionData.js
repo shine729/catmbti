@@ -19,7 +19,7 @@ export const QuestionData=[
     id:3,
     title:"당신은 어떤식으로 에너지를 채우는 편인가? ",
     answera:"모임이나,친구들과 만나서 수다떨며 맛있는거 먹기",
-    answerb:"집에서 쉬면서 넷플릭스보면서 야식먹기",
+    answerb:"집에서 쉬면서 혼자만의 시간을 갖으면서 놀기",
     type:"EI",
   },
   {
