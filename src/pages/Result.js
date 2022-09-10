@@ -43,7 +43,7 @@ import Fairy2 from '../assets/images/fairy2.png';
                   borderColor:'#8A20FA',
                   backgroundColor:'#8A20FA'
                 }}>테스트 다시하기</Button>
-                <KakaoShareButton data={resultData}/>
+                {/* <KakaoShareButton data={resultData}/> */}
       </Buttongroup>
     </Contents>
   </Wrapper>
