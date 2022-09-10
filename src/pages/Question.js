@@ -40,64 +40,20 @@ const Question = () => {
           mbti:mbti,
         })}`
       });
-    }
-
-
-    // if(type === "EI"){
-    //   //기존 스코어에 더할값을 계산(기존의 값+배점)
-    //   const addScore = totalScore[0].score + no;
-    //   //새로운 객체
-    //   const newObject = {id:"EI",score: addScore};
-    //   //splice 통해 새로운 객체를 해당객체 자리에 넣어줌
-    //   totalScore.splice(0,1,newObject);
-    // }else if(type === "SN"){
-    //   const addScore = totalScore[1].score + no;
-    //   const newObject = {id:"SN",score: addScore};
-    //   totalScore.splice(1,1,newObject);
-    // }else if(type === "TF"){
-    //   const addScore = totalScore[2].score + no;
-    //   const newObject = {id:"TF",score: addScore};
-    //   totalScore.splice(2,1,newObject);
-    // }else{
-    //   const addScore = totalScore[3].score + no;
-    //   const newObject = {id:"JP",score: addScore};
-    //   totalScore.splice(3,1,newObject);
-    // }
-    
+    }    
   }
 
-  /* const hadleClickButtonB = (no) => {
-    if(type === "EI"){
-      //기존 스코어에 더할값을 계산(기존의 값+배점)
-      const addScore = totalScore[0].score + no;
-      //새로운 객체
-      const newObject = {id:"EI",score: addScore};
-      //splice 통해 새로운 객체를 해당객체 자리에 넣어줌
-      totalScore.splice(0,1,newObject);
-    }else if(type === "SN"){
-      const addScore = totalScore[1].score + no;
-      const newObject = {id:"SN",score: addScore};
-      totalScore.splice(1,1,newObject);
-    }else if(type === "TF"){
-      const addScore = totalScore[2].score + no;
-      const newObject = {id:"TF",score: addScore};
-      totalScore.splice(2,1,newObject);
-    }else{
-      const addScore = totalScore[3].score + no;
-      const newObject = {id:"JP",score: addScore};
-      totalScore.splice(3,1,newObject);
-    }
-    setQuestionNo(questionNo + 1)
-  }*/
 
   return (
     <Wrapper>
-      <ProgressBar striped variant="danger" now={questionNo / QuestionData.length * 100} style={{marginTop:'20px'}}/>
-      <Title>{QuestionData[questionNo].title}</Title>
-      <ButtonGrounp>
-        <Button onClick={() => handleClickButton(1 , QuestionData[questionNo].type)} style={{width:'40%', minHeight:'200px', fontSize:'23px'}}>{QuestionData[questionNo].answera}</Button>
-        <Button onClick={() => handleClickButton(0 , QuestionData[questionNo].type)}  style={{width:'40%', minHeight:'200px', fontSize:'23px',marginLeft:'20px'}}>{QuestionData[questionNo].answerb}</Button>
-      </ButtonGrounp>
+      <ProgressBar striped variant="danger" now={questionNo / QuestionData.length * 100} />
+      <Titlewrap>
+        <Title>{QuestionData[questionNo].title}</Title>
+        <ButtonGrounp>
+          <Button onClick={() => handleClickButton(1 , QuestionData[questionNo].type)} style={{width:'40%', minHeight:'210px', fontSize:'23px'}}>{QuestionData[questionNo].answera}</Button>
+          <Button onClick={() => handleClickButton(0 , QuestionData[questionNo].type)}  style={{width:'40%', minHeight:'210px', fontSize:'23px',marginLeft:'20px'}}>{QuestionData[questionNo].answerb}</Button>
+        </ButtonGrounp>
+      </Titlewrap>
     </Wrapper>
   )
 }
@@ -109,11 +65,26 @@ const Wrapper = styled.div`
   height:100vh;
   width:100%;
 `
+
+const Titlewrap = styled.div`
+  width:100%;
+  position:absolute;
+  transform:translate(-50%,-50%);
+  left:50%;
+  top:50%;
+`
+
 const Title = styled.div`
   font-family: "SimKyungha";
   text-align:center;
   font-size:40px;
   color:#fff;
+  width:80%;
+  margin:0 auto;
+  margin-bottom:10px;
+  @media screen and (max-width: 992px) {
+    font-size:28px;
+  }
 `
 
 const ButtonGrounp = styled.div`
@@ -122,5 +93,4 @@ const ButtonGrounp = styled.div`
   flex-direction:row;
   align-items:center;
   justify-content:center;
-
 `
