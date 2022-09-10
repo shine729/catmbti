@@ -46,6 +46,8 @@ const KakaoShareButton = ({data}) => {
       fontSize: 23,
       marginTop: 20,
       marginLeft: 20,
+      borderColor:'#8A20FA',
+      backgroundColor:'#8A20FA'
     }}>카카오톡 공유하기</Button>
   )
 
